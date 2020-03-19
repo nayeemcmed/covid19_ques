@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<style>
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #0099ff;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body> 
+
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+  
+  
+  
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyD8kzt8atbMwYr4rJoNSdAbxmE6JZZ3Ioo",
+      authDomain: "covid-19-2eaef.firebaseapp.com",
+      databaseURL: "https://covid-19-2eaef.firebaseio.com",
+      projectId: "covid-19-2eaef",
+      storageBucket: "covid-19-2eaef.appspot.com",
+      messagingSenderId: "959942177361",
+      appId: "1:959942177361:web:6df8e1aa7e2b1880e87e70",
+      measurementId: "G-E1ZJSZFQZW"
+    };
+    // Initialize Firebase
+    
+    firebase.initializeApp(firebaseConfig);
+  
+    function lock() {
+     firebase.database().ref("User").set({
+       name: document.getElementById("name").value,
+       mobile: docuemt.getElementById("mobile").value
+     });
+     window.alert("okay");
+    }
+
+
+
+    function newwin() {
+       
+      window.open("first.html");
+
+    }
+  </script>
+
+
+
+<div class="header">
+  <img src="C:\Users\CMED\Desktop\Questionnaire_corona\img\1-08.jpg" alt="Girl in a jacket" style="width:200px;height:150px;">
+  <h2>অনলাইন করোনা ভাইরাস টেস্ট</h2>
+  <p >"মুজিববর্ষ উপলক্ষে CMED Health Ltd এর পক্ষ হতে উপহার"</p>
+</div>
+<h1 style="text-align:center">আপনি কি করোনা (COVID - 19) ভাইরাসে এর ঝুঁকি নিজে নিজে যাচাই করতে চান?</h1>
+<diV>
+  <form action="/action_page.php" style="text-align:center">
+   <label for="fname" style="font-size:bold">আপনার নামঃ</label><br>
+   <input type="text" id="name" placeholder="Your Name"><br><br>
+   <label for="lname" style="font-size:bold">আপনার মোবাইল নাম্বারঃ</label><br>
+   <input type="text" id="mobile" placeholder="Mobile Number" ><br><br>
+   <label for="lname" style="font-size:bold">আপনার বিভাগের নামঃ</label><br><br>
+   <div>
+   <select id="gname" placeholder="gloc" style="text-align: center">
+    <option value="DHAKA">DHAKA</option>
+    <option value="KHULA">KHULNA</option>
+    <option value="RAJSHAHI">RAJSHAHI</option>
+    <option value="Barishal">BARISHAL</option>
+    <option value="Chittagong">CHITTAGONG</option>
+    <option value="Sylhet">SYLHET</option>
+    <option value="Mymensingh">MYMENSINGH</option>
+    <option value="RANGPUR">RANGPUR</option>
+  </select><br><br>
+</div>
+   <button style="background-color: rgb(24, 123, 161); font-size: 10px; padding: 12px 28px; text-align: center; font-weight: bold; font-size: medium; color:cornsilk" type="Submit" onclick="newwin()">শুরু করুন</button>
+ </form> 
+     </diV>
+     <div>
+      <h3 style="text-align: center">Powered By: CMED Health Ltd</h3>
+    </div>
+</body>
+</html>
